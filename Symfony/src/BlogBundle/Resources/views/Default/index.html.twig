@@ -1,1 +1,17 @@
-Hello World!
+{% extends "::base.html.twig" %}
+
+{% block body %}
+  {% for article in articles %}
+    <div class="panel panel-default">
+      <div class="panel-heading">{{ article.title }}</div>
+      <div class="panel-body">
+        {{ article.content }}
+      </div>
+      <div class="panel-footer">
+        {% for category in article.categories %}
+          {{ category.name }}
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}

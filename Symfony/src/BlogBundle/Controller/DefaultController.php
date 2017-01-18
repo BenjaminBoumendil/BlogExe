@@ -8,6 +8,9 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('BlogBundle:Default:index.html.twig');
+        $repository = $this->getDoctrine()->getManager()->getRepository('BlogBundle:Article');
+        $articles = $repository->findBy(array('isActive' => true));
+
+        return $this->render('BlogBundle:Default:index.html.twig', array('articles' => $articles));
     }
 }
