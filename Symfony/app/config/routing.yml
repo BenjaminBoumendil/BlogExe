@@ -1,0 +1,15 @@
+account:
+    resource: "@AccountBundle/Resources/config/routing.yml"
+    prefix:   /
+
+admin_area:
+    resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
+    prefix: /admin
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
