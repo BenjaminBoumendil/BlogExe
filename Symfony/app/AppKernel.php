@@ -28,6 +28,7 @@ class AppKernel extends Kernel
 
             // My bundle
             new AccountBundle\AccountBundle(),
+            new BlogBundle\BlogBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
