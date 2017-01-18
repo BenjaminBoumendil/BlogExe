@@ -17,6 +17,7 @@ class ArticleAdmin extends AbstractAdmin
         $formMapper->add('title')
                    ->add('content')
                    ->add('categories')
+                   ->add('isActive')
         ;
     }
 
@@ -25,6 +26,7 @@ class ArticleAdmin extends AbstractAdmin
     {
         $datagridMapper->add('title')
                        ->add('categories')
+                       ->add('isActive')
         ;
     }
 
@@ -34,6 +36,7 @@ class ArticleAdmin extends AbstractAdmin
         $listMapper->addIdentifier('id')
                    ->addIdentifier('title')
                    ->addIdentifier('categories')
+                   ->add('isActive')
         ;
     }
 }
